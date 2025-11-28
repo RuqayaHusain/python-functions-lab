@@ -42,7 +42,7 @@ print('Exercise 2:', simple_interest(1000, 5, 2))
 #
 # Define your function and call it to display the discounted price.
 def apply_discount(price, discount):
-    total = price - ((price * discount) / 100)
+    total = price - ((price * discount) // 100)
     return total
 
 
@@ -74,3 +74,52 @@ def convert_temperature(temperature, unit):
 
 print('Exercise 4: Convert 0°C to Fahrenheit:', convert_temperature(0, 'C'))
 print('Exercise 4: Convert 32°F to Celsius:', convert_temperature(32, 'F'))
+
+# Exercise 5: Sum to N
+#
+# Write a function named `sum_to` that takes a single integer n and returns the sum of all integers from 1 to n.
+#
+# Examples:
+# sum_to(6) should return 21.
+# sum_to(10) should return 55.
+#
+# Define the function and then call it below.
+def sum_to(max_num):
+    num_range = range(max_num + 1)
+    sum = 0
+    for num in num_range:
+        sum += num
+
+    return sum
+
+
+print('Exercise 5:', sum_to(6))
+
+# Exercise 6: Find the Largest Number
+#
+# Write a function named `largest` that takes three integers as arguments and returns the largest of them.
+#
+# Examples:
+# largest(1, 2, 3) should return 3.
+# largest(10, 4, 2) should return 10.
+#
+# Define your function and test it with different inputs.
+def largest(first, second, third):
+    return max(first, second, third)
+
+print('Exercise 6:', largest(1, 2, 3))
+
+# Exercise 7: Calculate a Tip
+#
+# Create a function called `calculate_tip`. It should take the bill amount and the tip percentage (as a whole number).
+# The function should return the amount of the tip.
+#
+# Examples:
+# calculate_tip(50, 20) should return 10.
+#
+# Write your function and test its output below.
+def calculate_tip(bill_amount, tip):
+    return (bill_amount * tip) // 100
+
+
+print('Exercise 7:', calculate_tip(50, 20))
